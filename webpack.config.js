@@ -26,19 +26,23 @@ module.exports = {
         use: ["pug-loader"],
       },
       {
-        test: /\.(png|jpg|svg|gif)$/,
-        use: ["file-loader"],
-      },
-      {
-        test: /\.svg$/,
-        loader: "svg-inline-loader",
+        test: /\.(png|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "svg",
+            },
+          },
+        ],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: filename("html"),
-      template: "./src/layouts/landing_page.pug",
+      template: "./src/Website/DevelopPage.pug",
     }),
     new CleanWebpackPlugin(),
     new LiveReloadPlugin(),

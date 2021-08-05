@@ -1,0 +1,22 @@
+form{
+    width: 320px;
+}
+label {
+    
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+input{
+    position: relative;
+    top: 4px;
+    width: 301px;
+    color: rgba(31, 32, 65, 0.25);
+    font-weight: 400;
+    font-size: 14px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    height: 40px;
+    padding-left: 15px;
+    letter-spacing: 0.108em;
+}
